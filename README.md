@@ -78,6 +78,9 @@ Thank you to [all contributors of translations](https://github.com/LuaLS/lua-lan
 ## Privacy
 The language server had **opt-in** telemetry that collected usage data and sent it to the development team to help improve the extension. Read our [privacy policy](https://luals.github.io/privacy#language-server) to learn more. Telemetry was removed in `v3.6.5` and is no longer part of the language server.
 
+## Developing / Building the Extension
+
+See: [DEVELOPMENT.md](DEVELOPMENT.md)
 
 ## Contributors
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=sumneko/lua-language-server)
