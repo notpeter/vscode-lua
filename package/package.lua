@@ -1,13 +1,16 @@
 return {
     name = "lua",
+    bugs = {
+        url = "https://github.com/LuaLS/lua-language-server/issues"
+    },
     displayName = "Lua",
-    description = "Lua Language Server coded by Lua",
+    description = "Lua Language Server coded in Lua",
     author = "sumneko",
     icon = "images/logo.png",
     license = "MIT",
     repository = {
         type = "git",
-        url = "https://github.com/LuaLS/lua-language-server"
+        url = "https://github.com/LuaLS/vscode-lua"
     },
     publisher = "sumneko",
     categories = {
