@@ -53,7 +53,7 @@ local function copyWithNLS(t, callback)
 end
 
 local encodeOption = {
-    newline = '\r\n',
+    newline = '\n',
     indent  = '    ',
 }
 local function mergeDiagnosticGroupLocale(locale)
@@ -104,7 +104,7 @@ for dirPath in fs.pairs(fs.path 'server/locale') do
         nlsName    = 'package.nls.' .. lang .. '.json'
     end
 
-    fsu.saveFile(fs.path(schemaName), json.beautify(setting, encodeOption))
-    fsu.saveFile(fs.path(nlsName),    json.beautify(nls, encodeOption))
+    fsu.saveFile(fs.path(schemaName), json.beautify(setting, encodeOption) .. encodeOption.newline)
+    fsu.saveFile(fs.path(nlsName),    json.beautify(nls, encodeOption) .. encodeOption.newline)
     ::CONTINUE::
 end

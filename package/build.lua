@@ -18,8 +18,8 @@ package.version = VERSION
 -- }
 
 local encodeOption = {
-    newline = '\r\n',
-    indent  = '\t',
+    newline = '\n', -- Windows: '\r\n'
+    indent  = '    ',
 }
-print('生成 package.json')
-fsu.saveFile(ROOT / 'package.json', json.beautify(package, encodeOption) .. '\r\n')
+print('Generating package.json')
+fsu.saveFile(ROOT / 'package.json', json.beautify(package, encodeOption) .. encodeOption.newline)
