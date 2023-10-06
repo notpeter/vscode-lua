@@ -9,6 +9,7 @@
             "program": "${workspaceRoot}/publish.lua",
             "arg": [
             ],
+            "sourceCoding": "utf8",
             "luaexe": "${workspaceFolder}/server/bin/lua-language-server",
             "windows": {
                 "luaexe": "${workspaceFolder}/server/bin/lua-language-server.exe",
@@ -30,6 +31,7 @@
             "windows": {
                 "luaexe": "${workspaceFolder}/server/bin/lua-language-server.exe",
             },
+            "sourceCoding": "utf8",
             "outputCapture": [
                 "print",
                 "stderr",
