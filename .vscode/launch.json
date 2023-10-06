@@ -1,41 +1,45 @@
-// A launch configuration that compiles the extension and then opens it inside a new window
 {
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "发布",
+            "name": "Publish Release (发布)",
             "type": "lua",
             "request": "launch",
             "stopOnEntry": false,
             "program": "${workspaceRoot}/publish.lua",
             "arg": [
             ],
-            "sourceCoding": "utf8",
-            "luaexe": "${workspaceFolder}/server/bin/lua-language-server.exe",
+            "luaexe": "${workspaceFolder}/server/bin/lua-language-server",
+            "windows": {
+                "luaexe": "${workspaceFolder}/server/bin/lua-language-server.exe",
+            },
             "outputCapture": [
                 "print",
                 "stderr",
             ],
         },
         {
-            "name": "导出配置文件",
+            "name": "Export Configuration File (导出配置文件)",
             "type": "lua",
             "request": "launch",
             "stopOnEntry": false,
             "program": "${workspaceRoot}/build-settings.lua",
             "arg": [
             ],
-            "luaexe": "${workspaceFolder}/server/bin/lua-language-server.exe",
-            "sourceCoding": "utf8",
+            "luaexe": "${workspaceFolder}/server/bin/lua-language-server",
+            "windows": {
+                "luaexe": "${workspaceFolder}/server/bin/lua-language-server.exe",
+            },
             "outputCapture": [
                 "print",
                 "stderr",
             ],
         },
+        // A launch configuration that compiles the extension and then opens it inside a new window
         {
+            "name": "Launch Client (VSCode Extension)",
             "type": "extensionHost",
             "request": "launch",
-            "name": "Launch Client",
             "runtimeExecutable": "${execPath}",
             "args": ["--extensionDevelopmentPath=${workspaceRoot}"],
             "outFiles": ["${workspaceRoot}/client/out/**/*.js"],
