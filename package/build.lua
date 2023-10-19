@@ -18,7 +18,7 @@ package.version = VERSION
 -- }
 
 local encodeOption = {
-    newline = '\n', -- Windows: '\r\n'
+    newline = '\r\n',
     indent  = '    ',
 }
 print('Generating package.json')

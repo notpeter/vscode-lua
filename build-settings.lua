@@ -53,7 +53,7 @@ local function copyWithNLS(t, callback)
 end
 
 local encodeOption = {
-    newline = '\n',
+    newline = '\r\n',
     indent  = '    ',
 }
 local function mergeDiagnosticGroupLocale(locale)
